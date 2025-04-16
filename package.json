@@ -1,0 +1,34 @@
+{
+  "name": "apolloserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js",
+    "migrate": "npx prisma migrate dev --name init",
+    "drop": "npx prisma migrate reset"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "prisma": "^6.6.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.12.0",
+    "@graphql-tools/load-files": "^7.0.1",
+    "@graphql-tools/utils": "^10.8.6",
+    "@prisma/client": "^6.6.0",
+    "fs": "^0.0.1-security",
+    "graphql": "^16.10.0",
+    "graphql-tag": "^2.12.6",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
+}

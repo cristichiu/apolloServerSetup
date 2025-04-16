@@ -1,0 +1,9 @@
+type Client {
+  id: ID! @auth(requires: ADMIN)
+  name: String
+  age: Int
+}
+ 
+type Query {
+  client: Client
+}
