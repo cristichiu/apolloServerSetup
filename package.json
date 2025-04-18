@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc",
+    "compile": "tsc && node ./graphqlDefTrans.js",
     "start": "npm run compile && node ./dist/index.js",
     "migrate": "npx prisma migrate dev --name init",
     "drop": "npx prisma migrate reset"
