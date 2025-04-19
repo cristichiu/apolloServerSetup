@@ -15,7 +15,7 @@ let schema = makeExecutableSchema({
 })
 schema = authDirectiveTransformer(schema)
 
-const server = new ApolloServer({ schema: schema });
+const server = new ApolloServer({ schema });
 
 const { url } = await startStandaloneServer(server, {
   listen: { port: 4000 },
@@ -28,7 +28,7 @@ const { url } = await startStandaloneServer(server, {
       role: "ADMIN",
     }
     
-    return { user }
+    return { user, prisma }
   }
 })
 console.log(`Start: ${url}`);
