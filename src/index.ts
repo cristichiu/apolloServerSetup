@@ -3,7 +3,7 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 
 import { authDirectiveTypeDefs , authDirectiveTransformer } from "./directives/auth.js"
-import typeDefs from "./graphql/defTypes/index.js"
+import typeDefs from "./graphql/typeDefs/index.js"
 import resolvers from './graphql/resolvers/index.js';
 
 import { PrismaClient } from '@prisma/client';
